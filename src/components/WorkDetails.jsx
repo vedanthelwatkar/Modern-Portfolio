@@ -25,9 +25,9 @@ const WorkDetails = () => {
       }
       case "tbb": {
         setImages([
-          "/phoenix-website.png",
-          "/phoenix-website-2.png",
-          "/phoenix-website-3.png",
+          "/tbb-website.png",
+          "/tbb-website-2.png",
+          "/tbb-website-3.png",
         ]);
         setTimeline("29/01/2024 - 14/02/2025");
         setRole("Full Stack Developer");
@@ -35,9 +35,9 @@ const WorkDetails = () => {
       }
       case "tbb-dashboard": {
         setImages([
-          "/phoenix-website.png",
-          "/phoenix-website-2.png",
-          "/phoenix-website-3.png",
+          "/tbb-dashboard-website.png",
+          "/tbb-dashboard-website-2.png",
+          "/tbb-dashboard-website-3.png",
         ]);
         setTimeline("29/01/2024 - 14/02/2025");
         setRole("Full Stack Developer");
@@ -53,9 +53,9 @@ const WorkDetails = () => {
       }
       case "vtube": {
         setImages([
-          "/phoenix-website.png",
-          "/phoenix-website-2.png",
-          "/phoenix-website-3.png",
+          "/vtube-website-3.png",
+          "/vtube-website.png",
+          "/vtube-website-2.png",
         ]);
         setTimeline("29/01/2024 - 14/02/2025");
         setRole("Personal Project");
