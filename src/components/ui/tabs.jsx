@@ -1,7 +1,9 @@
 "use client";
-import { useState } from "react";
-import { motion } from "framer-motion";
+
+import { useState, useEffect, useRef } from "react";
+import { motion, useScroll } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export const Tabs = ({
   tabs: propTabs,
@@ -9,28 +11,56 @@ export const Tabs = ({
   activeTabClassName,
   tabClassName,
 }) => {
-  const [active, setActive] = useState(propTabs[0]);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const currentPath = location.pathname.replace(/\/$/, ""); // Remove trailing slash
+  const containerRef = useRef(null);
 
-  const moveSelectedTabToTop = (idx) => {
-    const newTabs = [...propTabs];
-    const selectedTab = newTabs.splice(idx, 1);
-    newTabs.unshift(selectedTab[0]);
-    setActive(newTabs[0]);
-  };
+  const [active, setActive] = useState(
+    propTabs.find((tab) => currentPath.includes(tab.value)) || propTabs[0]
+  );
+
+  const { scrollY } = useScroll();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const matchedTab = propTabs.find((tab) => currentPath.includes(tab.value));
+    if (matchedTab) {
+      setActive(matchedTab);
+    }
+  }, [currentPath, propTabs]);
+
+  useEffect(() => {
+    const unsubscribe = scrollY.onChange((latest) => {
+      setIsScrolled(latest > 0);
+    });
+    return () => unsubscribe();
+  }, [scrollY]);
 
   return (
-    <div
+    <motion.div
+      ref={containerRef}
       className={cn(
-        "flex flex-row items-center justify-start [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full",
+        `flex flex-row items-center justify-start [perspective:1000px] overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full sticky top-0 z-10 p-2 rounded-[100px] gap-3 ${
+          isScrolled && "shadow-sm"
+        }`,
         containerClassName
       )}
+      style={{
+        backgroundColor: isScrolled
+          ? "rgba(255, 255, 255, 0.7)"
+          : "transparent",
+        backdropFilter: isScrolled ? "blur(10px)" : "none",
+        WebkitBackdropFilter: isScrolled ? "blur(10px)" : "none",
+        transition: "all 0.3s ease-in-out",
+      }}
     >
-      {propTabs.map((tab, idx) => (
+      {propTabs.map((tab) => (
         <button
           key={tab.title}
           onClick={() => {
-            moveSelectedTabToTop(idx);
-            tab.onClick();
+            setActive(tab);
+            navigate(tab.path);
           }}
           className={cn("relative px-4 py-1 rounded-full", tabClassName)}
           style={{
@@ -53,6 +83,6 @@ export const Tabs = ({
           </span>
         </button>
       ))}
-    </div>
+    </motion.div>
   );
 };
