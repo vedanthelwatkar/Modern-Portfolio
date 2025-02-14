@@ -109,7 +109,7 @@ const Home = () => {
         <img src={tbbDashboard} className="h-[180px] w-full object-cover" />
       ),
       icon: <LayoutDashboard className="h-4 w-4 text-light dark:text-dark" />,
-      onClick: () => navigate("/work/tbb-dashboard"),
+      onClick: () => navigate("/work/dashboard"),
     },
     {
       title: "Development Technology Stack",
@@ -117,7 +117,7 @@ const Home = () => {
         "Full-stack development environment utilizing React.js frontend, Flask/Django backend, and MySQL database.",
       header: <Skeleton />,
       icon: <WrenchIcon className="h-4 w-4 text-light dark:text-dark" />,
-      onClick: () => navigate("/work/tech-stack"),
+      onClick: () => navigate("/work/stack"),
     },
     {
       title: "Video Sharing Platform Clone",
