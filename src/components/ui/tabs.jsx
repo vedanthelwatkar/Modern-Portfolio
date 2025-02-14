@@ -1,7 +1,5 @@
-"use client";
-
 import { useState, useEffect, useRef } from "react";
-import { motion, useScroll } from "framer-motion";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -30,12 +28,9 @@ export const Tabs = ({
     }
   }, [currentPath, propTabs]);
 
-  useEffect(() => {
-    const unsubscribe = scrollY.onChange((latest) => {
-      setIsScrolled(latest > 0);
-    });
-    return () => unsubscribe();
-  }, [scrollY]);
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setIsScrolled(latest > 0);
+  });
 
   return (
     <motion.div
