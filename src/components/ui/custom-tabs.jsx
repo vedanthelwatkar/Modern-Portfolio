@@ -42,9 +42,7 @@ export const CustomTabs = ({
         containerClassName
       )}
       style={{
-        backgroundColor: isScrolled
-          ? "rgba(255, 255, 255, 0.7)"
-          : "transparent",
+        backgroundColor: isScrolled ? "rgba(30, 41, 59, 0.7)" : "transparent",
         backdropFilter: isScrolled ? "blur(10px)" : "none",
         WebkitBackdropFilter: isScrolled ? "blur(10px)" : "none",
         transition: "all 0.3s ease-in-out",

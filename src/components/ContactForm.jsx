@@ -84,7 +84,10 @@ const ContactForm = () => {
     <form onSubmit={handleSubmit} className="w-full space-y-3 p-2">
       {/* Name Input */}
       <div className="space-y-1">
-        <label htmlFor="name" className="block text-xs font-medium">
+        <label
+          htmlFor="name"
+          className="block text-xs font-medium text-light dark:text-dark"
+        >
           Name
         </label>
         <div className="relative">
@@ -97,12 +100,14 @@ const ContactForm = () => {
             name="name"
             value={formState.name}
             onChange={handleChange}
-            className={`w-full pl-9 pr-3 py-2 text-sm bg-neutral-100 border rounded-lg 
-              ${
-                errors.name
-                  ? "border-red-500 focus:ring-red-200"
-                  : "border-neutral-300 focus:border-blue-500"
-              }`}
+            className={`w-full pl-9 pr-3 py-2 text-sm border rounded-lg 
+    bg-neutral-100 dark:bg-neutral-900 
+    text-neutral-900 dark:text-neutral-100
+    ${
+      errors.name
+        ? "border-red-500 focus:ring-red-200"
+        : "border-neutral-300 dark:border-neutral-700 focus:border-blue-500 dark:focus:border-blue-400"
+    }`}
             placeholder="Your name"
           />
         </div>
@@ -113,7 +118,10 @@ const ContactForm = () => {
 
       {/* Email Input */}
       <div className="space-y-1">
-        <label htmlFor="email" className="block text-xs font-medium">
+        <label
+          htmlFor="email"
+          className="block text-xs font-medium text-light dark:text-dark"
+        >
           Email
         </label>
         <div className="relative">
@@ -126,12 +134,14 @@ const ContactForm = () => {
             name="email"
             value={formState.email}
             onChange={handleChange}
-            className={`w-full pl-9 pr-3 py-2 text-sm bg-neutral-100 border rounded-lg 
-              ${
-                errors.email
-                  ? "border-red-500 focus:ring-red-200"
-                  : "border-neutral-300 focus:border-blue-500"
-              }`}
+            className={`w-full pl-9 pr-3 py-2 text-sm border rounded-lg 
+    bg-neutral-100 dark:bg-neutral-900 
+    text-neutral-900 dark:text-neutral-100
+    ${
+      errors.email
+        ? "border-red-500 focus:ring-red-200"
+        : "border-neutral-300 dark:border-neutral-700 focus:border-blue-500 dark:focus:border-blue-400"
+    }`}
             placeholder="your.email@example.com"
           />
         </div>
@@ -142,7 +152,10 @@ const ContactForm = () => {
 
       {/* Message Textarea */}
       <div className="space-y-1">
-        <label htmlFor="message" className="block text-xs font-medium">
+        <label
+          htmlFor="message"
+          className="block text-xs font-medium text-light dark:text-dark"
+        >
           Message
         </label>
         <div className="relative">
@@ -155,12 +168,14 @@ const ContactForm = () => {
             value={formState.message}
             onChange={handleChange}
             rows="4"
-            className={`w-full pl-9 pr-3 py-2 text-sm bg-neutral-100 border rounded-lg 
-              ${
-                errors.message
-                  ? "border-red-500 focus:ring-red-200"
-                  : "border-neutral-300 focus:border-blue-500"
-              }`}
+            className={`w-full pl-9 pr-3 py-2 text-sm border rounded-lg 
+    bg-neutral-100 dark:bg-neutral-900 
+    text-neutral-900 dark:text-neutral-100
+    ${
+      errors.message
+        ? "border-red-500 focus:ring-red-200"
+        : "border-neutral-300 dark:border-neutral-700 focus:border-blue-500 dark:focus:border-blue-400"
+    }`}
             placeholder="Your message..."
           />
         </div>
