@@ -1,6 +1,6 @@
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import tbb from "/tbb-website.png";
-import unifynd from "/unifynd-website.png";
+import unifynd from "/phoenix-website.png";
 import vtube from "/vtube-website.png";
 import tbbDashboard from "/tbb-dashboard-website.png";
 import { motion } from "framer-motion";
@@ -131,42 +131,69 @@ const Home = () => {
 
   return (
     <div className="w-full flex flex-col items-center justify-center pb-20 px-4 sm:px-0">
-      <div className="min-h-[50vh] sm:min-h-[80vh] flex-col title relative flex gap-5 items-center justify-center">
+      <div className="mt-24 mb-12 flex-col title relative flex gap-5 items-center justify-center">
         <div className="w-full flex items-center justify-center">
           <AvailableIndicator />
         </div>
         <div className="text-center">
-          <span className="title-text flex items-center justify-center font-title mx-2 sm:mx-5 text-light text-4xl sm:text-6xl md:text-8xl font-semibold dark:text-dark">
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="title-text flex items-center justify-center font-title mx-2 sm:mx-5 text-light text-4xl sm:text-6xl md:text-8xl font-semibold dark:text-dark"
+          >
             Hi. I'm Vedant.
-          </span>
-          <span className="title-text items-center justify-center mx-2 sm:mx-5 text-light flex text-4xl sm:text-6xl md:text-8xl font-semibold dark:text-dark">
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="title-text items-center justify-center mx-2 sm:mx-5 text-light flex text-xl sm:text-2xl md:text-3xl font-medium dark:text-dark"
+          >
             <p className="dev-font">{`<`}</p>
             <p className="font-title">A Developer</p>
             <p className="dev-font">{`/>`}</p>
-          </span>
+          </motion.span>
         </div>
-        <p className="mt-4 title-desc leading-relaxed tracking-tight text-light text-center dark:text-dark text-base sm:text-lg">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mt-4 title-desc leading-relaxed tracking-tight text-light text-center dark:text-dark text-base sm:text-lg"
+        >
           I Build What Your Business Needs
-        </p>
-        <AnimatedButton
-          text="Work With Me"
-          path="/contact"
-          icon={<Contact className="h-4 w-4" />}
-        />
-      </div>
-      <BentoGrid className="gap-4">
-        {items.map((item, i) => (
-          <BentoGridItem
-            key={i}
-            title={item.title}
-            description={item.description}
-            header={item.header}
-            icon={item.icon}
-            className={i === 3 || i === 6 ? "md:col-span-2" : ""}
-            onClick={item.onClick}
+        </motion.p>
+        <motion.button
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <AnimatedButton
+            text="Work With Me"
+            path="/contact"
+            icon={<Contact className="h-4 w-4" />}
           />
-        ))}
-      </BentoGrid>
+        </motion.button>
+      </div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
+        <BentoGrid className="gap-4" cols={3}>
+          {items.map((item, i) => (
+            <BentoGridItem
+              key={i}
+              title={item.title}
+              description={item.description}
+              header={item.header}
+              icon={item.icon}
+              className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+              onClick={item.onClick}
+            />
+          ))}
+        </BentoGrid>
+      </motion.div>
     </div>
   );
 };

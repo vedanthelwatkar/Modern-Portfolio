@@ -1,83 +1,44 @@
-import { useState, useEffect, useRef } from "react";
-import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import * as React from "react";
+import * as TabsPrimitive from "@radix-ui/react-tabs";
+
 import { cn } from "@/lib/utils";
-import { useLocation, useNavigate } from "react-router-dom";
 
-export const Tabs = ({
-  tabs: propTabs,
-  containerClassName,
-  activeTabClassName,
-  tabClassName,
-}) => {
-  const location = useLocation();
-  const navigate = useNavigate();
-  const currentPath = location.pathname.replace(/\/$/, ""); // Remove trailing slash
-  const containerRef = useRef(null);
+const Tabs = TabsPrimitive.Root;
 
-  const [active, setActive] = useState(
-    propTabs.find((tab) => currentPath.includes(tab.value)) || propTabs[0]
-  );
+const TabsList = React.forwardRef(({ className, ...props }, ref) => (
+  <TabsPrimitive.List
+    ref={ref}
+    className={cn(
+      "inline-flex h-9 items-center justify-center rounded-lg bg-zinc-100 p-1 text-zinc-500 dark:bg-zinc-800 dark:text-zinc-400",
+      className
+    )}
+    {...props}
+  />
+));
+TabsList.displayName = TabsPrimitive.List.displayName;
 
-  const { scrollY } = useScroll();
-  const [isScrolled, setIsScrolled] = useState(false);
+const TabsTrigger = React.forwardRef(({ className, ...props }, ref) => (
+  <TabsPrimitive.Trigger
+    ref={ref}
+    className={cn(
+      "inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-white transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-white data-[state=active]:text-zinc-950 data-[state=active]:shadow dark:ring-offset-zinc-950 dark:focus-visible:ring-zinc-300 dark:data-[state=active]:bg-zinc-950 dark:data-[state=active]:text-zinc-50",
+      className
+    )}
+    {...props}
+  />
+));
+TabsTrigger.displayName = TabsPrimitive.Trigger.displayName;
 
-  useEffect(() => {
-    const matchedTab = propTabs.find((tab) => currentPath.includes(tab.value));
-    if (matchedTab) {
-      setActive(matchedTab);
-    }
-  }, [currentPath, propTabs]);
+const TabsContent = React.forwardRef(({ className, ...props }, ref) => (
+  <TabsPrimitive.Content
+    ref={ref}
+    className={cn(
+      "mt-2 ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:ring-offset-zinc-950 dark:focus-visible:ring-zinc-300",
+      className
+    )}
+    {...props}
+  />
+));
+TabsContent.displayName = TabsPrimitive.Content.displayName;
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    setIsScrolled(latest > 0);
-  });
-
-  return (
-    <motion.div
-      ref={containerRef}
-      className={cn(
-        `flex flex-row items-center justify-start [perspective:1000px] overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full sticky top-0 z-10 p-2 rounded-[100px] gap-3 ${
-          isScrolled && "shadow-sm"
-        }`,
-        containerClassName
-      )}
-      style={{
-        backgroundColor: isScrolled
-          ? "rgba(255, 255, 255, 0.7)"
-          : "transparent",
-        backdropFilter: isScrolled ? "blur(10px)" : "none",
-        WebkitBackdropFilter: isScrolled ? "blur(10px)" : "none",
-        transition: "all 0.3s ease-in-out",
-      }}
-    >
-      {propTabs.map((tab) => (
-        <button
-          key={tab.title}
-          onClick={() => {
-            setActive(tab);
-            navigate(tab.path);
-          }}
-          className={cn("relative px-4 py-1 rounded-full", tabClassName)}
-          style={{
-            transformStyle: "preserve-3d",
-          }}
-        >
-          {active.value === tab.value && (
-            <motion.div
-              layoutId="clickedbutton"
-              transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
-              className={cn(
-                "absolute inset-0 bg-gray-200 dark:bg-zinc-800 rounded-full",
-                activeTabClassName
-              )}
-            />
-          )}
-
-          <span className="relative flex text-light dark:text-dark">
-            {tab.title}
-          </span>
-        </button>
-      ))}
-    </motion.div>
-  );
-};
+export { Tabs, TabsList, TabsTrigger, TabsContent };

@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import ThemeToggle from "./components/ThemeToggle";
-import { Tabs } from "./components/ui/tabs";
+import { CustomTabs } from "./components/ui/custom-tabs";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
@@ -14,9 +14,9 @@ const App = () => {
   ];
 
   return (
-    <div className="bg-white dark:bg-black">
+    <div className="bg-white dark:bg-black pb-10">
       <div className="fixed top-6 left-1/2 transform -translate-x-1/2 z-20">
-        <Tabs tabs={tabs} />
+        <CustomTabs tabs={tabs} />
       </div>
 
       <Routes>

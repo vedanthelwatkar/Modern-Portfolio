@@ -1,10 +1,10 @@
 import { cn } from "@/lib/utils";
 
-export const BentoGrid = ({ className, children }) => {
+export const BentoGrid = ({ className, children, cols }) => {
   return (
     <div
       className={cn(
-        "mx-5 grid md:auto-rows-[20rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl",
+        `mx-5 grid grid-cols-1 md:grid-cols-${cols} gap-4 max-w-7xl`,
         className
       )}
     >
