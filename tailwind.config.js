@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        title: ["Acorn", "sans-serif"],
+        title: ["Acorn", "Montserrat", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
