@@ -50,7 +50,25 @@ const Contact = () => {
       title: "Get In Touch",
       description:
         "Fill out the form and I'll get back to you as soon as possible.",
-      header: <ContactForm />,
+      header: (
+        <div className="space-y-4">
+          <ContactForm />
+          <div className="mt-4 border-t border-neutral-200 dark:border-neutral-700 pt-4 text-center">
+            <div className="flex items-center justify-center space-x-2">
+              <PhoneCall className="h-5 w-5 text-blue-600" />
+              <a
+                href="tel:+919769785721"
+                className="text-sm font-medium text-neutral-700 hover:text-blue-600 dark:text-neutral-300 dark:hover:text-blue-400 transition-colors"
+              >
+                +91 9769785721
+              </a>
+            </div>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">
+              Feel free to call or WhatsApp
+            </p>
+          </div>
+        </div>
+      ),
       icon: <MessageSquare className="h-4 w-4 text-light dark:text-dark" />,
       className: "md:col-span-2 md:row-span-2",
     },
