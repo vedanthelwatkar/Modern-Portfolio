@@ -1,8 +1,69 @@
-# React + Vite
+# 🚀 Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Overview
 
-Currently, two official plugins are available:
+A modern, responsive portfolio website showcasing my professional work, skills, and contact information. Built with React, Tailwind CSS, and deployed with cutting-edge web technologies.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tech Stack
+
+- React
+- React Router
+- Framer Motion
+- Tailwind CSS
+- EmailJS
+- Lucide React
+
+## ✨ Features
+
+- Dark/Light Mode Toggle
+- Responsive Design
+- Animated Navigation
+- Project Showcase
+- Contact Form
+- Mobile-Friendly
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js (v16+)
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/portfolio
+
+# Navigate to project directory
+cd portfolio
+
+# Install dependencies
+npm install
+
+# Start development server
+npm start
+```
+
+## 📱 Responsive Breakpoints
+
+- Mobile: 320px - 767px
+- Tablet: 768px - 1023px
+- Desktop: 1024px+
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit changes
+4. Push to the branch
+5. Create a Pull Request
+
+## 📞 Contact
+
+- Email: vedanthelwatkar@example.com
+- LinkedIn: [https://www.linkedin.com/in/vedanthelwatkar]
+- Phone: +91 9769785721
+
+---
+
+**Happy Coding!** 👨‍💻
