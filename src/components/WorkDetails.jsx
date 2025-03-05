@@ -40,7 +40,7 @@ const workData = {
       author: "Anish Jain",
       position: "CEO, Unifynd",
     },
-    next: "tbb",
+    next: "/tbb",
   },
 
   tbb: {
@@ -67,7 +67,7 @@ const workData = {
       author: "Priya Rajan",
       position: "Founder, The Banyan Branch",
     },
-    next: "dashboard",
+    next: "/dashboard",
   },
 
   dashboard: {
@@ -99,7 +99,7 @@ const workData = {
       author: "Priya Rajan",
       position: "Founder, The Banyan Branch",
     },
-    next: "vtube",
+    next: "/vtube",
   },
 
   vtube: {
@@ -131,7 +131,7 @@ const workData = {
       author: "Vedant Helwatkar",
       position: "Creator, VTube",
     },
-    next: "unifynd",
+    next: "/unifynd",
   },
 };
 
