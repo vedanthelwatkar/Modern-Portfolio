@@ -38,11 +38,14 @@ export const CustomTabs = ({
       className={cn(
         `flex flex-row items-center justify-start [perspective:1000px] overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full sticky top-0 z-10 p-2 rounded-[100px] gap-3 ${
           isScrolled && "shadow-sm"
+        } ${
+          isScrolled
+            ? "bg-[rgba(255, 255, 255, 0.7)] dark:bg-[rgba(17, 24, 39, 0.8)]"
+            : "bg-transparent"
         }`,
         containerClassName
       )}
       style={{
-        backgroundColor: isScrolled ? "rgba(30, 41, 59, 0.7)" : "transparent",
         backdropFilter: isScrolled ? "blur(10px)" : "none",
         WebkitBackdropFilter: isScrolled ? "blur(10px)" : "none",
         transition: "all 0.3s ease-in-out",
@@ -63,7 +66,7 @@ export const CustomTabs = ({
           {active.value === tab.value && (
             <motion.div
               layoutId="clickedbutton"
-              transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
+              transition={{ type: "spring", bounce: 0.001, duration: 0.001 }}
               className={cn(
                 "absolute inset-0 bg-gray-200 dark:bg-zinc-800 rounded-full",
                 activeTabClassName

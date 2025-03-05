@@ -2,12 +2,13 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-export default function AnimatedButton({ text, path, icon }) {
+export default function AnimatedButton({ type, text, path, icon }) {
   const [isHovered, setIsHovered] = useState(false);
   const navigate = useNavigate();
 
   return (
     <button
+      type={type}
       className="relative overflow-hidden bg-light dark:bg-dark text-dark dark:text-black px-6 py-2 rounded-md font-medium"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}

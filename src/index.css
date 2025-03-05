@@ -1,6 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer utilities {
+  .safe-bottom {
+    bottom: max(1rem, env(safe-area-inset-bottom) + 1rem);
+  }
+}
 
 @font-face {
   font-family: "Acorn";

@@ -14,7 +14,7 @@ const App = () => {
   ];
 
   return (
-    <div className="bg-white dark:bg-black pb-10">
+    <div className="relative bg-white dark:bg-black pb-10">
       <div className="fixed top-6 left-1/2 transform -translate-x-1/2 z-20">
         <CustomTabs tabs={tabs} />
       </div>
@@ -23,11 +23,11 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/work/:id" element={<WorkDetails />} />
+        <Route path=":id" element={<WorkDetails />} />
         <Route path="*" element={<Home />} />
       </Routes>
 
-      <div className="fixed bottom-4 right-4 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-800 shadow-lg">
+      <div className="fixed bottom-4 right-4 z-50 w-12 h-12 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-800 shadow-lg pb-[env(safe-area-inset-bottom)]">
         <ThemeToggle />
       </div>
     </div>

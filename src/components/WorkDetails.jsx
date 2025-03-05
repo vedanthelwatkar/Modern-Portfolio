@@ -40,7 +40,7 @@ const workData = {
       author: "Anish Jain",
       position: "CEO, Unifynd",
     },
-    next: "/work/tbb",
+    next: "tbb",
   },
 
   tbb: {
@@ -67,7 +67,7 @@ const workData = {
       author: "Priya Rajan",
       position: "Founder, The Banyan Branch",
     },
-    next: "/work/dashboard",
+    next: "dashboard",
   },
 
   dashboard: {
@@ -99,7 +99,7 @@ const workData = {
       author: "Priya Rajan",
       position: "Founder, The Banyan Branch",
     },
-    next: "/work/vtube",
+    next: "vtube",
   },
 
   vtube: {
@@ -131,7 +131,7 @@ const workData = {
       author: "Vedant Helwatkar",
       position: "Creator, VTube",
     },
-    next: "/work/unifynd",
+    next: "unifynd",
   },
 };
 
@@ -181,16 +181,15 @@ const WorkDetails = () => {
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.3 }}
-        className="fixed top-6 left-6 z-50"
+        className="fixed top-6 lg:top-4 left-2 p-2 z-50"
       >
         <Button
           variant="ghost"
           size="icon"
-          className="rounded-full bg-background/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300"
+          className="rounded-full bg-background/80 dark:bg-dark/30 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300"
           onClick={() => navigate("/")}
         >
-          <ArrowLeft className="w-5 h-5" />
-          <span className="sr-only">Back</span>
+          <ArrowLeft className="text-light dark:text-white w-5 h-5" />
         </Button>
       </motion.div>
 
@@ -209,17 +208,17 @@ const WorkDetails = () => {
 
       <section className="relative pt-24 md:pt-32 overflow-hidden">
         <div className="container px-4 mx-auto relative z-10">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto flex flex-col gap-2">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="flex flex-col items-center text-center mb-8"
+              className="flex flex-col items-center text-center gap-2"
             >
-              <h1 className="font-title text-4xl sm:text-5xl md:text-6xl font-bold text-light dark:text-dark mb-4">
+              <h1 className="font-title text-4xl sm:text-5xl md:text-6xl font-bold text-light dark:text-dark ">
                 {workItem.title}
               </h1>
-              <p className="text-xl md:text-2xl text-light/70 dark:text-dark/70 mb-6">
+              <p className="text-xl md:text-2xl text-light/70 dark:text-dark/70">
                 {workItem.subtitle}
               </p>
             </motion.div>
@@ -228,7 +227,7 @@ const WorkDetails = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="flex flex-wrap justify-center gap-4 mb-8"
+              className="flex flex-wrap justify-center gap-4"
             >
               <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 backdrop-blur-sm">
                 <Calendar className="w-4 h-4 text-light/70 dark:text-dark/70" />
@@ -248,7 +247,7 @@ const WorkDetails = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex flex-wrap justify-center gap-2 mb-12"
+              className="flex flex-wrap justify-center gap-2"
             >
               {workItem.technologies.map((tech, index) => (
                 <Badge
@@ -295,7 +294,7 @@ const WorkDetails = () => {
               </TabsList>
             </div>
 
-            <TabsContent value="overview" className="space-y-12">
+            <TabsContent value="overview" className="space-y-4">
               <Card className="overflow-hidden border-none bg-background/60 backdrop-blur-sm shadow-lg">
                 <CardContent className="p-0">
                   <div className="flex flex-col lg:flex-row">
@@ -306,7 +305,7 @@ const WorkDetails = () => {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="p-8 lg:p-12 flex flex-col justify-center lg:w-2/3">
+                    <div className="p-8 lg:p-12 flex flex-col justify-center items-center lg:w-2/3">
                       <h2 className="text-2xl font-bold mb-6 text-light dark:text-dark">
                         Project Overview
                       </h2>
@@ -332,7 +331,9 @@ const WorkDetails = () => {
                   className="bg-secondary/10 rounded-2xl p-8 md:p-12 max-w-4xl mx-auto"
                 >
                   <div className="flex flex-col items-center text-center">
-                    <div className="text-5xl text-primary mb-6">"</div>
+                    <div className="text-5xl text-light dark:text-dark mb-6">
+                      "
+                    </div>
                     <p className="text-lg md:text-xl italic text-light dark:text-dark mb-8">
                       {workItem.testimonial.quote}
                     </p>

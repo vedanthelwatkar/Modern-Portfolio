@@ -91,7 +91,7 @@ const Home = () => {
         />
       ),
       icon: <Workflow className="h-4 w-4 text-light dark:text-dark" />,
-      onClick: () => navigate("/work/unifynd"),
+      onClick: () => navigate("unifynd"),
     },
     {
       title: "Therapy Services Website",
@@ -99,7 +99,7 @@ const Home = () => {
         "Dynamic therapy website with booking system, service directory, and contact management.",
       header: <img src={tbb} className="h-[180px] w-full object-cover" />,
       icon: <Brain className="h-4 w-4 text-light dark:text-dark" />,
-      onClick: () => navigate("/work/tbb"),
+      onClick: () => navigate("tbb"),
     },
     {
       title: "Therapy Practice Management Dashboard",
@@ -109,7 +109,7 @@ const Home = () => {
         <img src={tbbDashboard} className="h-[180px] w-full object-cover" />
       ),
       icon: <LayoutDashboard className="h-4 w-4 text-light dark:text-dark" />,
-      onClick: () => navigate("/work/dashboard"),
+      onClick: () => navigate("dashboard"),
     },
     {
       title: "Development Technology Stack",
@@ -124,7 +124,7 @@ const Home = () => {
         "MERN stack implementation of a video sharing platform with features similar to YouTube.",
       header: <img src={vtube} className="h-[180px] w-full object-cover" />,
       icon: <VideoIcon className="h-4 w-4 text-light dark:text-dark" />,
-      onClick: () => navigate("/work/vtube"),
+      onClick: () => navigate("vtube"),
     },
   ];
 
@@ -158,7 +158,7 @@ const Home = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-4 title-desc leading-relaxed tracking-tight text-light text-center dark:text-dark text-base sm:text-lg"
+          className="title-desc leading-relaxed tracking-tight text-light text-center dark:text-dark text-base sm:text-lg"
         >
           I Build What Your Business Needs
         </motion.p>

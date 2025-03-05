@@ -112,7 +112,7 @@ const Contact = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-4 title-desc leading-relaxed tracking-tight text-light text-center dark:text-dark text-base sm:text-lg max-w-2xl"
+          className="title-desc leading-relaxed tracking-tight text-light text-center dark:text-dark text-base sm:text-lg max-w-2xl"
         >
           Have a project in mind or want to discuss potential opportunities? I'm
           currently available for freelance work and interesting collaborations.
@@ -124,7 +124,7 @@ const Contact = () => {
         >
           <AnimatedButton
             text="View My Work"
-            path="/work/unifynd"
+            path="unifynd"
             icon={<Briefcase className="h-4 w-4" />}
           />
         </motion.button>

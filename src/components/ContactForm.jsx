@@ -195,11 +195,11 @@ const ContactForm = () => {
       <button
         type="submit"
         disabled={isSubmitting || isSubmitted}
-        className={`w-full flex items-center justify-center gap-2 py-2 px-4 rounded-lg text-sm font-medium transition-all
+        className={`w-full flex items-center justify-center gap-2 py-2 px-6 rounded-lg text-sm font-medium transition-all
           ${
             isSubmitted
               ? "bg-green-500 text-white"
-              : "bg-blue-500 hover:bg-blue-600 text-white"
+              : "bg-light dark:bg-dark hover:bg-green-700 dark:hover:bg-neutral-400 text-dark dark:text-black"
           }`}
       >
         {isSubmitting ? (
