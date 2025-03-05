@@ -40,7 +40,7 @@ const dockItems = [
   {
     title: "Github",
     icon: <GithubIcon className="text-light dark:text-dark" />,
-    href: "https://www.github.com/vedanthelwatkar/Projects",
+    href: "https://www.github.com/vedanthelwatkar",
   },
 ];
 
