@@ -55,7 +55,7 @@ const Contact = () => {
           <ContactForm />
           <div className="mt-4 border-t border-neutral-200 dark:border-neutral-700 pt-4 text-center">
             <div className="flex items-center justify-center space-x-2">
-              <PhoneCall className="h-5 w-5 text-blue-600" />
+              <PhoneCall className="h-5 w-5 text-light dark:text-dark" />
               <a
                 href="tel:+919769785721"
                 className="text-sm font-medium text-neutral-700 hover:text-blue-600 dark:text-neutral-300 dark:hover:text-blue-400 transition-colors"
@@ -63,9 +63,6 @@ const Contact = () => {
                 +91 9769785721
               </a>
             </div>
-            <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">
-              Feel free to call or WhatsApp
-            </p>
           </div>
         </div>
       ),
@@ -135,17 +132,6 @@ const Contact = () => {
           Have a project in mind or want to discuss potential opportunities? I'm
           currently available for freelance work and interesting collaborations.
         </motion.p>
-        <motion.button
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <AnimatedButton
-            text="View My Work"
-            path="unifynd"
-            icon={<Briefcase className="h-4 w-4" />}
-          />
-        </motion.button>
         <motion.button
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
