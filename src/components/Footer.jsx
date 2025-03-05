@@ -9,11 +9,11 @@ const Footer = () => {
           © {new Date().getFullYear()} Vedant Helwatkar. All rights reserved.
         </p>
         <a
-          href="mailto:helwatkarvedant@gmail.com"
+          href="mailto:vedanthelwatkar@gmail.com"
           className="flex items-center text-sm text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors duration-300"
         >
           <Mail size={16} className="mr-2" />
-          helwatkarvedant@gmail.com
+          vedanthelwatkar@gmail.com
         </a>
       </div>
     </footer>
