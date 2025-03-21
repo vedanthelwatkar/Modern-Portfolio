@@ -1,25 +1,11 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
-import { FloatingDock } from "@/components/ui/floating-dock";
-import {
-  AtSign,
-  Briefcase,
-  Check,
-  GithubIcon,
-  Linkedin,
-  MailIcon,
-  MessageSquare,
-  PhoneCall,
-  Send,
-  User,
-} from "lucide-react";
-import AvailableIndicator from "@/components/AvailableIndicator";
-import AnimatedButton from "@/components/ui/animated-button";
-import { ArrowRight } from "lucide-react";
-import ContactForm from "../components/ContactForm";
-
-const cn = (...classes) => classes.filter(Boolean).join(" ");
+import { useState } from "react"
+import { motion } from "framer-motion"
+import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid"
+import { FloatingDock } from "@/components/ui/floating-dock"
+import { FileText, GithubIcon, Linkedin, MailIcon, MessageSquare, PhoneCall, User } from "lucide-react"
+import AvailableIndicator from "@/components/AvailableIndicator"
+import { ArrowRight } from "lucide-react"
+import ContactForm from "@/components/ContactForm"
 
 const dockItems = [
   {
@@ -42,14 +28,22 @@ const dockItems = [
     icon: <GithubIcon className="text-light dark:text-dark" />,
     href: "https://www.github.com/vedanthelwatkar",
   },
-];
+]
 
 const Contact = () => {
+  const [isDownloading, setIsDownloading] = useState(false)
+
+  const handleDownload = () => {
+    setIsDownloading(true)
+    // Reset state after animation completes
+    setTimeout(() => setIsDownloading(false), 2000)
+    // No need to prevent default or do anything else that might interfere with the download
+  }
+
   const items = [
     {
       title: "Get In Touch",
-      description:
-        "Fill out the form and I'll get back to you as soon as possible.",
+      description: "Fill out the form and I'll get back to you as soon as possible.",
       header: (
         <div className="space-y-4">
           <ContactForm />
@@ -75,23 +69,35 @@ const Contact = () => {
       header: (
         <div className="p-4 space-y-4">
           <p className="text-sm text-neutral-600 dark:text-neutral-400">
-            I'm a passionate full-stack developer with over 2 years of
-            experience in creating web applications. My expertise includes
-            React, Next.js, Node.js, and Python.
+            I'm a passionate full-stack developer with over 2 years of experience in creating web applications. My
+            expertise includes React, Next.js, Node.js, and Python.
           </p>
-          <a
-            href="/about"
-            className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200"
-          >
-            Learn more about my skills and experience
-            <ArrowRight className="ml-1 h-4 w-4" />
-          </a>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 mt-2">
+            <a
+              href="/about"
+              className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200"
+            >
+              Learn more about my skills and experience
+              <ArrowRight className="ml-1 h-4 w-4" />
+            </a>
+            <a
+              href="/Vedant_Helwatkar_Resume.pdf"
+              download="Vedant_Helwatkar_Resume.pdf"
+              onClick={handleDownload}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-sm font-medium px-4 py-2 rounded-md bg-light dark:bg-dark text-dark dark:text-light hover:bg-green-700 transition-colors"
+            >
+              <FileText className="mr-2 h-4 w-4" />
+              Download Resume
+            </a>
+          </div>
         </div>
       ),
       icon: <User className="h-4 w-4 text-light dark:text-dark" />,
       className: "md:col-span-2",
     },
-  ];
+  ]
 
   return (
     <div className="w-full flex flex-col items-center justify-center pb-20 px-4 sm:px-0">
@@ -116,9 +122,7 @@ const Contact = () => {
           >
             <div className="flex">
               <p className="dev-font">{`<`}</p>
-              <p className="font-title">
-                Passionate Developer & Problem Solver
-              </p>
+              <p className="font-title">Passionate Developer & Problem Solver</p>
               <p className="dev-font">{`/>`}</p>
             </div>
           </motion.span>
@@ -129,14 +133,10 @@ const Contact = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="title-desc leading-relaxed tracking-tight text-light text-center dark:text-dark text-base sm:text-lg max-w-2xl"
         >
-          Have a project in mind or want to discuss potential opportunities? I'm
-          currently available for freelance work and interesting collaborations.
+          Have a project in mind or want to discuss potential opportunities? I'm currently available for freelance work
+          and interesting collaborations.
         </motion.p>
-        <motion.button
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
+        <motion.button initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
           <FloatingDock items={dockItems} />
         </motion.button>
       </div>
@@ -159,7 +159,8 @@ const Contact = () => {
         </BentoGrid>
       </motion.div>
     </div>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact
+
