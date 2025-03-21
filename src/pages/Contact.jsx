@@ -35,9 +35,7 @@ const Contact = () => {
 
   const handleDownload = () => {
     setIsDownloading(true)
-    // Reset state after animation completes
     setTimeout(() => setIsDownloading(false), 2000)
-    // No need to prevent default or do anything else that might interfere with the download
   }
 
   const items = [
@@ -81,8 +79,8 @@ const Contact = () => {
               <ArrowRight className="ml-1 h-4 w-4" />
             </a>
             <a
-              href="/Vedant_Helwatkar_Resume.pdf"
-              download="Vedant_Helwatkar_Resume.pdf"
+              href="/Vedant-Helwatkar-Resume-2025.pdf"
+              download="Vedant-Helwatkar-Resume-2025.pdf"
               onClick={handleDownload}
               target="_blank"
               rel="noopener noreferrer"
