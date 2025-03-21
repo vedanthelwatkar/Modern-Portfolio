@@ -84,7 +84,7 @@ const Contact = () => {
               onClick={handleDownload}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center text-sm font-medium px-4 py-2 rounded-md bg-light dark:bg-dark text-dark dark:text-light hover:bg-green-700 transition-colors"
+              className="inline-flex items-center text-sm font-medium px-4 py-2 rounded-md bg-light dark:bg-dark text-dark dark:text-black hover:bg-green-700 transition-colors"
             >
               <FileText className="mr-2 h-4 w-4" />
               Download Resume
