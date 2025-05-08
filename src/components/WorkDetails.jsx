@@ -18,21 +18,21 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const workData = {
   unifynd: {
     title: "Unifynd",
-    subtitle: "Loyalty Program Platform by Unifynd",
+    subtitle: "Loyalty Program Platform for Phoenix Malls",
     iframe: "https://www.phoenixnhance.com/",
     thumbnail: "/phoenix.webp",
     timeline: "29/01/2024 - 14/02/2025",
     role: "Associate Software Engineer",
     overview:
-      "Developed and optimized Nhance, a cutting-edge loyalty program platform for Phoenix Malls, enhancing customer retention and engagement across India.",
+      "Engineered and optimized Nhance, a next-generation loyalty program platform for Phoenix Malls, boosting customer retention and engagement across India.",
     impact: [
-      "Enhanced the reward system, increasing customer interactions and boosting repeat visits to Phoenix Malls.",
+      "Improved the reward system, resulting in increased customer interactions and higher repeat visits.",
     ],
     technologies: ["React", "Node.js", "MySQL", "Express", "AWS"],
     metrics: [
       { label: "User Engagement Increase", value: "+62%" },
       { label: "Loyalty Transactions Processed", value: "500K+" },
-      { label: "Active Users", value: "1k+" },
+      { label: "Active Users", value: "1K+" },
     ],
     testimonial: {
       quote:
@@ -44,35 +44,9 @@ const workData = {
   },
 
   tbb: {
-    title: "TBB",
-    subtitle: "The Banyan Branch",
+    title: "The Banyan Branch",
+    subtitle: "Therapy Website & Dashboard",
     iframe: "https://www.thebanyanbranch.com",
-    thumbnail: "/tbb-logo.png",
-    timeline: "29/01/2024 - 14/02/2025",
-    role: "Full Stack Developer",
-    overview: "A fully dynamic therapy website developed for Priya Rajan.",
-    impact: [
-      "Enabled seamless client bookings and dynamic content updates.",
-      "Integrated secure payment options and personalized therapy plans.",
-    ],
-    technologies: ["React", "Redux", "Tailwind", "AWS"],
-    metrics: [
-      { label: "Client Retention", value: "+40%" },
-      { label: "Booking Efficiency", value: "+65%" },
-      { label: "User Satisfaction", value: "92%" },
-    ],
-    testimonial: {
-      quote:
-        "The website has streamlined our therapy sessions and provided a seamless experience for our clients.",
-      author: "Priya Rajan",
-      position: "Founder, The Banyan Branch",
-    },
-    next: "/dashboard",
-  },
-
-  dashboard: {
-    title: "TBB Dashboard",
-    subtitle: "Dashboard for The Banyan Branch Therapy Website",
     thumbnail: "/tbb-logo.png",
     images: [
       "/tbb-dashboard-website.png",
@@ -80,56 +54,83 @@ const workData = {
       "/tbb-dashboard-website-3.png",
     ],
     timeline: "29/01/2024 - 14/02/2025",
-    role: "Full Stack Developer",
+    role: "Freelance Full Stack Developer",
     overview:
-      "A private dashboard for managing and modifying client-side details for The Banyan Branch Therapy Website.",
+      "A fully dynamic therapy website with integrated admin dashboard developed for Priya Rajan, enabling seamless client management and content updates.",
     impact: [
+      "Enabled seamless client bookings and dynamic content updates.",
+      "Integrated secure payment options and personalized therapy plans.",
       "Developed secure admin access for managing client data.",
       "Enabled real-time content updates without affecting live sessions.",
     ],
-    technologies: ["React", "Python", "Django", "MySQL", "Express", "AWS"],
+    technologies: ["React", "Redux", "Tailwind", "Django", "MySQL", "AWS"],
     metrics: [
+      { label: "Client Retention", value: "+40%" },
+      { label: "Booking Efficiency", value: "+65%" },
       { label: "Admin Efficiency", value: "+80%" },
       { label: "Data Accuracy", value: "99%" },
-      { label: "Operational Time Reduction", value: "60%" },
     ],
     testimonial: {
       quote:
-        "The dashboard has significantly streamlined our workflow, allowing us to focus more on client care.",
+        "The website and dashboard have streamlined our therapy sessions and significantly improved our workflow, allowing us to focus more on client care.",
       author: "Priya Rajan",
       position: "Founder, The Banyan Branch",
     },
-    next: "/vtube",
+    next: "/learnshackedu",
   },
 
-  vtube: {
-    title: "VTube",
-    subtitle: "YouTube Clone - Personal Project",
-    thumbnail: "/vtube-logo.jpeg",
-    images: [
-      "/vtube-website.png",
-      "/vtube-website-2.png",
-      "/vtube-website-3.png",
-    ],
-    timeline: "29/01/2024 - 14/02/2025",
-    role: "Full Stack Developer",
+  learnshackedu: {
+    title: "LearnShackEDU",
+    subtitle: "Educational Platform Website",
+    thumbnail: "/learnshackedu-logo.png",
+    iframe: "https://www.learnshackedu.com/",
+    timeline: "01-03-2025- current",
+    role: "Freelance",
     overview:
-      "A fully functional YouTube clone built as a personal project with features like video uploads, real-time comments, and recommendations.",
+      "Developed an educational platform website offering structured learning experiences and easy content management.",
     impact: [
-      "Built a robust video streaming architecture to ensure high performance.",
-      "Implemented an intelligent recommendation system to enhance user experience.",
+      "Built a responsive, content-driven platform tailored for educational delivery.",
+      "Optimized the user experience to support student engagement and content scalability.",
     ],
-    technologies: ["React", "Node.js", "MySQL", "Express", "Vercel"],
+    technologies: ["React", "Node.js", "MySQL", "Express", "AWS"],
     metrics: [
-      { label: "User Retention", value: "90%" },
-      { label: "User Interactions", value: "+75%" },
-      { label: "Video Quality", value: "100%" },
+      { label: "Content Upload Speed", value: "+70%" },
+      { label: "Student Engagement", value: "+50%" },
+      { label: "Platform Uptime", value: "99.9%" },
     ],
     testimonial: {
       quote:
-        "VTube was a challenging but rewarding project that helped me refine my full-stack development skills.",
-      author: "Vedant Helwatkar",
-      position: "Creator, VTube",
+        "The platform has significantly enhanced our ability to deliver quality education at scale.",
+      author: "Aman Gupta",
+      position: "Founder, LearnShackEDU",
+    },
+    next: "/arigato",
+  },
+
+  arigato: {
+    title: "Arigato Events",
+    subtitle: "Event Management Website",
+    thumbnail: "/arigato.png",
+    iframe: "https://www.arigatoevents.com/",
+    timeline: "01-06-2025 - 04-06-2025",
+    role: "Freelance",
+    overview:
+      "Designed and built a visually appealing event management website with features for showcasing events, booking, and lead capture.",
+    impact: [
+      "Created a high-end aesthetic to reflect brand elegance and trust.",
+      "Implemented booking and contact flows for lead generation.",
+    ],
+    technologies: ["React", "Node.js", "MySQL", "Express", "AWS"],
+    metrics: [
+      { label: "Leads Captured", value: "+300%" },
+      { label: "Page Load Time", value: "<1.2s" },
+      { label: "Bounce Rate Reduction", value: "-40%" },
+    ],
+    testimonial: {
+      quote:
+        "This website is exactly what we envisioned—modern, elegant, and conversion-optimized.",
+      author: "Designs by Abhishek",
+      position: "Creative Lead, Arigato Events",
     },
     next: "/unifynd",
   },
@@ -141,13 +142,14 @@ const WorkDetails = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [activeTab, setActiveTab] = useState("overview");
   const [workItem, setWorkItem] = useState(null);
-  console.log("workItem: ", workItem);
+  const [previewMode, setPreviewMode] = useState("website");
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     setIsLoading(true);
     if (id && id in workData) {
       setWorkItem(workData[id]);
+      setPreviewMode(workData[id].iframe ? "website" : "images");
       setIsLoading(false);
     }
 
@@ -199,7 +201,7 @@ const WorkDetails = () => {
           initial={{ width: "0%" }}
           animate={{
             width: `${
-              ((currentImageIndex + 1) / workItem?.images?.length) * 100
+              ((currentImageIndex + 1) / (workItem?.images?.length || 1)) * 100
             }%`,
           }}
           transition={{ duration: 0.3 }}
@@ -270,7 +272,7 @@ const WorkDetails = () => {
 
       <section className="pt-12 md:pt-16">
         <div className="container px-4 mx-auto">
-          <Tabs defaultValue="overview" className="max-w-5xl mx-auto mb-16">
+          <Tabs defaultValue="overview" className="max-w-[70dvw] mx-auto mb-16">
             <div className="flex justify-center mb-8">
               <TabsList className="grid grid-cols-3 w-full max-w-md">
                 <TabsTrigger
@@ -351,90 +353,202 @@ const WorkDetails = () => {
             </TabsContent>
 
             <TabsContent value="preview">
-              <div className="relative overflow-hidden rounded-xl bg-background/60 backdrop-blur-sm shadow-xl">
-                {workItem.iframe ? (
-                  <div className="w-full overflow-hidden">
-                    <iframe
-                      src={workItem.iframe}
-                      className="w-full aspect-[16/9] border-0"
-                      style={{ minHeight: "400px" }}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
+              {id === "tbb" ? (
+                <div>
+                  <div className="flex justify-center mb-6">
+                    <div className="flex bg-background/60 backdrop-blur-sm rounded-lg p-1 shadow-md">
+                      <button
+                        className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
+                          previewMode === "website"
+                            ? "bg-primary text-light"
+                            : "text-black/50 dark:text-dark/50 hover:text-black dark:hover:text-dark"
+                        }`}
+                        onClick={() => setPreviewMode("website")}
+                      >
+                        Website
+                      </button>
+                      <button
+                        className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
+                          previewMode === "images"
+                            ? "bg-primary text-light"
+                            : "text-black/50 dark:text-dark/50 hover:text-black dark:hover:text-dark"
+                        }`}
+                        onClick={() => setPreviewMode("images")}
+                      >
+                        Dashboard
+                      </button>
+                    </div>
                   </div>
-                ) : (
-                  <>
-                    <div className="aspect-[16/9] relative overflow-hidden">
-                      <AnimatePresence mode="wait">
-                        <motion.div
-                          key={currentImageIndex}
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                          transition={{ duration: 0.5 }}
-                          className="absolute inset-0"
-                        >
-                          <img
-                            src={
-                              workItem.images[currentImageIndex] ||
-                              "/placeholder.svg" ||
-                              "/placeholder.svg"
-                            }
-                            alt={`${workItem.title} screenshot ${
-                              currentImageIndex + 1
-                            }`}
-                            className="w-full h-full object-contain"
-                          />
-                        </motion.div>
-                      </AnimatePresence>
 
-                      <Button
-                        variant="ghost"
-                        size="icon"
-                        className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-background/80 backdrop-blur-sm shadow-lg hover:bg-background/90 z-10"
-                        onClick={prevImage}
-                      >
-                        <ChevronLeft className="h-5 w-5" />
-                        <span className="sr-only">Previous image</span>
-                      </Button>
-
-                      <Button
-                        variant="ghost"
-                        size="icon"
-                        className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-background/80 backdrop-blur-sm shadow-lg hover:bg-background/90 z-10"
-                        onClick={nextImage}
-                      >
-                        <ChevronRight className="h-5 w-5" />
-                        <span className="sr-only">Next image</span>
-                      </Button>
-
-                      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-background/80 backdrop-blur-sm text-xs font-medium z-10">
-                        {currentImageIndex + 1} / {workItem?.images?.length}
+                  <div className="relative overflow-hidden rounded-xl bg-background/60 backdrop-blur-sm shadow-xl">
+                    {previewMode === "website" ? (
+                      <div className="w-full overflow-hidden">
+                        <iframe
+                          src={workItem.iframe}
+                          className="w-full aspect-[16/9] border-0"
+                          style={{ minHeight: "400px" }}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        />
                       </div>
-                    </div>
+                    ) : (
+                      <>
+                        <div className="aspect-[16/9] relative overflow-hidden">
+                          <AnimatePresence mode="wait">
+                            <motion.div
+                              key={currentImageIndex}
+                              initial={{ opacity: 0 }}
+                              animate={{ opacity: 1 }}
+                              exit={{ opacity: 0 }}
+                              transition={{ duration: 0.5 }}
+                              className="absolute inset-0"
+                            >
+                              <img
+                                src={
+                                  workItem.images[currentImageIndex] ||
+                                  "/placeholder.svg"
+                                }
+                                alt={`${workItem.title} screenshot ${
+                                  currentImageIndex + 1
+                                }`}
+                                className="w-full h-full object-contain"
+                              />
+                            </motion.div>
+                          </AnimatePresence>
 
-                    <div className="p-4 flex justify-center gap-2 overflow-x-auto">
-                      {workItem.images.map((img, idx) => (
-                        <button
-                          key={idx}
-                          className={`relative w-16 h-16 rounded-md overflow-hidden transition-all flex-shrink-0 ${
-                            currentImageIndex === idx
-                              ? "ring-2 ring-primary ring-offset-2"
-                              : "opacity-70 hover:opacity-100"
-                          }`}
-                          onClick={() => setCurrentImageIndex(idx)}
-                        >
-                          <img
-                            src={img || "/placeholder.svg"}
-                            alt={`Thumbnail ${idx + 1}`}
-                            className="w-full h-full object-cover"
-                          />
-                        </button>
-                      ))}
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-background/80 backdrop-blur-sm shadow-lg hover:bg-background/90 z-10"
+                            onClick={prevImage}
+                          >
+                            <ChevronLeft className="h-5 w-5" />
+                            <span className="sr-only">Previous image</span>
+                          </Button>
+
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-background/80 backdrop-blur-sm shadow-lg hover:bg-background/90 z-10"
+                            onClick={nextImage}
+                          >
+                            <ChevronRight className="h-5 w-5" />
+                            <span className="sr-only">Next image</span>
+                          </Button>
+
+                          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-background/80 backdrop-blur-sm text-xs font-medium z-10">
+                            {currentImageIndex + 1} / {workItem?.images?.length}
+                          </div>
+                        </div>
+
+                        <div className="p-4 flex justify-center gap-2 overflow-x-auto">
+                          {workItem.images.map((img, idx) => (
+                            <button
+                              key={idx}
+                              className={`relative w-16 h-16 rounded-md overflow-hidden transition-all flex-shrink-0 ${
+                                currentImageIndex === idx
+                                  ? "ring-2 ring-primary ring-offset-2"
+                                  : "opacity-70 hover:opacity-100"
+                              }`}
+                              onClick={() => setCurrentImageIndex(idx)}
+                            >
+                              <img
+                                src={img || "/placeholder.svg"}
+                                alt={`Thumbnail ${idx + 1}`}
+                                className="w-full h-full object-cover"
+                              />
+                            </button>
+                          ))}
+                        </div>
+                      </>
+                    )}
+                  </div>
+                </div>
+              ) : (
+                <div className="relative overflow-hidden rounded-xl bg-background/60 backdrop-blur-sm shadow-xl">
+                  {workItem.iframe ? (
+                    <div className="w-full overflow-hidden">
+                      <iframe
+                        src={workItem.iframe}
+                        className="w-full aspect-[16/9] border-0"
+                        style={{ minHeight: "400px" }}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
                     </div>
-                  </>
-                )}
-              </div>
+                  ) : (
+                    <>
+                      <div className="aspect-[16/9] relative overflow-hidden">
+                        <AnimatePresence mode="wait">
+                          <motion.div
+                            key={currentImageIndex}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="absolute inset-0"
+                          >
+                            <img
+                              src={
+                                workItem.images[currentImageIndex] ||
+                                "/placeholder.svg"
+                              }
+                              alt={`${workItem.title} screenshot ${
+                                currentImageIndex + 1
+                              }`}
+                              className="w-full h-full object-contain"
+                            />
+                          </motion.div>
+                        </AnimatePresence>
+
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-background/80 backdrop-blur-sm shadow-lg hover:bg-background/90 z-10"
+                          onClick={prevImage}
+                        >
+                          <ChevronLeft className="h-5 w-5" />
+                          <span className="sr-only">Previous image</span>
+                        </Button>
+
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-background/80 backdrop-blur-sm shadow-lg hover:bg-background/90 z-10"
+                          onClick={nextImage}
+                        >
+                          <ChevronRight className="h-5 w-5" />
+                          <span className="sr-only">Next image</span>
+                        </Button>
+
+                        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-background/80 backdrop-blur-sm text-xs font-medium z-10">
+                          {currentImageIndex + 1} / {workItem?.images?.length}
+                        </div>
+                      </div>
+
+                      <div className="p-4 flex justify-center gap-2 overflow-x-auto">
+                        {workItem.images.map((img, idx) => (
+                          <button
+                            key={idx}
+                            className={`relative w-16 h-16 rounded-md overflow-hidden transition-all flex-shrink-0 ${
+                              currentImageIndex === idx
+                                ? "ring-2 ring-primary ring-offset-2"
+                                : "opacity-70 hover:opacity-100"
+                            }`}
+                            onClick={() => setCurrentImageIndex(idx)}
+                          >
+                            <img
+                              src={img || "/placeholder.svg"}
+                              alt={`Thumbnail ${idx + 1}`}
+                              className="w-full h-full object-cover"
+                            />
+                          </button>
+                        ))}
+                      </div>
+                    </>
+                  )}
+                </div>
+              )}
             </TabsContent>
 
             <TabsContent value="impact">

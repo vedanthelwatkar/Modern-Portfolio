@@ -94,22 +94,34 @@ const Home = () => {
       onClick: () => navigate("unifynd"),
     },
     {
-      title: "Therapy Services Website",
+      title: "Arigato Events",
       description:
-        "Dynamic therapy website with booking system, service directory, and contact management.",
-      header: <img src={tbb} className="h-[180px] w-full object-cover" />,
-      icon: <Brain className="h-4 w-4 text-light dark:text-dark" />,
-      onClick: () => navigate("tbb"),
-    },
-    {
-      title: "Therapy Practice Management Dashboard",
-      description:
-        "Administrative dashboard for managing brand settings, appointments, analytics, and content configuration.",
+        "Responsive website for a premium event management agency with booking and gallery features.",
       header: (
-        <img src={tbbDashboard} className="h-[180px] w-full object-cover" />
+        <img
+          src="/arigatoevents.png"
+          alt="Arigato Events"
+          className="h-[180px] w-full object-cover"
+        />
       ),
       icon: <LayoutDashboard className="h-4 w-4 text-light dark:text-dark" />,
-      onClick: () => navigate("dashboard"),
+      onClick: () => navigate("arigato"),
+    },
+    {
+      title: "Therapy Services Website & Dashboard",
+      description:
+        "Comprehensive platform including a client-facing website and a management dashboard for appointments, analytics, and content.",
+      header: (
+        <div className="grid grid-cols-2 gap-2 h-[180px]">
+          <img src={tbb} className="object-cover w-full h-full rounded" />
+          <img
+            src={tbbDashboard}
+            className="object-cover w-full h-full rounded"
+          />
+        </div>
+      ),
+      icon: <Brain className="h-4 w-4 text-light dark:text-dark" />,
+      onClick: () => navigate("tbb"),
     },
     {
       title: "Development Technology Stack",
@@ -119,12 +131,18 @@ const Home = () => {
       icon: <WrenchIcon className="h-4 w-4 text-light dark:text-dark" />,
     },
     {
-      title: "Video Sharing Platform Clone",
+      title: "Learnshack Education Platform",
       description:
-        "MERN stack implementation of a video sharing platform with features similar to YouTube.",
-      header: <img src={vtube} className="h-[180px] w-full object-cover" />,
+        "Edtech platform for online courses and skill-based learning built for scaling across devices.",
+      header: (
+        <img
+          src="/learnshackedu.png"
+          alt="Learnshack"
+          className="h-[180px] w-full object-cover"
+        />
+      ),
       icon: <VideoIcon className="h-4 w-4 text-light dark:text-dark" />,
-      onClick: () => navigate("vtube"),
+      onClick: () => navigate("learnshackedu"),
     },
   ];
 
